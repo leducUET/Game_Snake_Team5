@@ -1,0 +1,182 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://turok.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://sreehari-menon-bg4mob-part-2.jpg" type="Texture" id=2]
+[ext_resource path="res://Untitled-4.png" type="Texture" id=3]
+[ext_resource path="res://wall.png" type="Texture" id=4]
+[ext_resource path="res://Script/Levers/ButtonLv1.gd" type="Script" id=5]
+[ext_resource path="res://Script/Levers/ButtonBack.gd" type="Script" id=6]
+[ext_resource path="res://Script/Levers/ButtonLv2.gd" type="Script" id=7]
+[ext_resource path="res://Script/Levers/ButtonLv3.gd" type="Script" id=8]
+[ext_resource path="res://Script/Levers/ButtonLv4.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 65
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 130
+outline_color = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Levers" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 637.429, 392.353 )
+scale = Vector2( 1.1884, 1.00312 )
+texture = ExtResource( 2 )
+
+[node name="ButtonBack" type="TextureButton" parent="."]
+anchor_right = 0.123
+anchor_bottom = 0.107
+margin_right = 0.559998
+margin_bottom = -0.176003
+rect_min_size = Vector2( 158, 82 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ButtonBack"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.25
+anchor_top = 0.043
+anchor_right = 0.75
+anchor_bottom = 1.0
+margin_right = -6.10352e-05
+custom_constants/separation = 27
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_left = 130.0
+margin_right = 509.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 0, 160 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Levers"
+align = 1
+valign = 1
+
+[node name="ButtonLv1" type="TextureButton" parent="VBoxContainer"]
+margin_left = 169.0
+margin_top = 187.0
+margin_right = 469.0
+margin_bottom = 277.0
+rect_min_size = Vector2( 300, 90 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+expand = true
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="VBoxContainer/ButtonLv1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Lever 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLv2" type="TextureButton" parent="VBoxContainer"]
+margin_left = 169.0
+margin_top = 304.0
+margin_right = 469.0
+margin_bottom = 394.0
+rect_min_size = Vector2( 300, 90 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+expand = true
+script = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="VBoxContainer/ButtonLv2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Lever 2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLv3" type="TextureButton" parent="VBoxContainer"]
+margin_left = 169.0
+margin_top = 421.0
+margin_right = 469.0
+margin_bottom = 511.0
+rect_min_size = Vector2( 300, 90 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="VBoxContainer/ButtonLv3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Lever 3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLv4" type="TextureButton" parent="VBoxContainer"]
+margin_left = 169.0
+margin_top = 538.0
+margin_right = 469.0
+margin_bottom = 628.0
+rect_min_size = Vector2( 300, 90 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+expand = true
+script = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="VBoxContainer/ButtonLv4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Lever 4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ButtonBack" to="ButtonBack" method="_on_ButtonBack_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonLv1" to="VBoxContainer/ButtonLv1" method="_on_ButtonLv1_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonLv2" to="VBoxContainer/ButtonLv2" method="_on_ButtonLv2_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonLv3" to="VBoxContainer/ButtonLv3" method="_on_ButtonLv3_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonLv4" to="VBoxContainer/ButtonLv4" method="_on_ButtonLv4_pressed"]

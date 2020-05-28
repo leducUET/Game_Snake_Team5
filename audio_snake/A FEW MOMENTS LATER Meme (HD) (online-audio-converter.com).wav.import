@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/A FEW MOMENTS LATER Meme (HD) (online-audio-converter.com).wav-48909c7f6d7f7a4f025fc917b9e2c41d.sample"
+
+[deps]
+
+source_file="res://audio_snake/A FEW MOMENTS LATER Meme (HD) (online-audio-converter.com).wav"
+dest_files=[ "res://.import/A FEW MOMENTS LATER Meme (HD) (online-audio-converter.com).wav-48909c7f6d7f7a4f025fc917b9e2c41d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,73 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Lever",
+"language": "GDScript",
+"path": "res://Script/Lever.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Script/Player.gd"
+}, {
+"base": "Area2D",
+"class": "Portal",
+"language": "GDScript",
+"path": "res://Script/Portal.gd"
+}, {
+"base": "Node",
+"class": "Tail",
+"language": "GDScript",
+"path": "res://Script/Tail.gd"
+} ]
+_global_script_class_icons={
+"Lever": "",
+"Player": "",
+"Portal": "",
+"Tail": ""
+}
+
+[application]
+
+config/name="Snake"
+run/main_scene="res://Scene/menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+DataPlayer="*res://Scene/DataPlayer.tscn"
+AudioManage="*res://Scene/AudioManage.tscn"
+
+[display]
+
+window/size/width=1280
+window/size/height=768
+window/dpi/allow_hidpi=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[input]
+
+click_mouse={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/physics_fps=144
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

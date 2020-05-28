@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/The-Price-is-Right-Losing-Horn-Gaming-Sound-Effect-_HD_-_online-audio-converter.com_.wav-3bdd2dfb65f9b86d0acf3794a7acf969.sample"
+
+[deps]
+
+source_file="res://audio_snake/The-Price-is-Right-Losing-Horn-Gaming-Sound-Effect-_HD_-_online-audio-converter.com_.wav"
+dest_files=[ "res://.import/The-Price-is-Right-Losing-Horn-Gaming-Sound-Effect-_HD_-_online-audio-converter.com_.wav-3bdd2dfb65f9b86d0acf3794a7acf969.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=false
+compress/mode=0

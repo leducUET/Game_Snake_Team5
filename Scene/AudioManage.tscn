@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Script/AudioManage.gd" type="Script" id=1]
+[ext_resource path="res://audio_snake/Elevator Music - Vanoss Gaming Background Music (HD).wav" type="AudioStream" id=2]
+[ext_resource path="res://audio_snake/Roblox-Death-Sound-Sound-Effect-_HD_.wav" type="AudioStream" id=3]
+[ext_resource path="res://audio_snake/The-Price-is-Right-Losing-Horn-Gaming-Sound-Effect-_HD_-_online-audio-converter.com_.wav" type="AudioStream" id=4]
+[ext_resource path="res://audio_snake/Duck Quack - Sound Effect (HD).wav" type="AudioStream" id=5]
+[ext_resource path="res://audio_snake/A FEW MOMENTS LATER Meme (HD) (online-audio-converter.com).wav" type="AudioStream" id=6]
+
+[node name="AudioManage" type="Node"]
+script = ExtResource( 1 )
+
+[node name="MusicPlayer" type="Node" parent="."]
+
+[node name="music_player" type="AudioStreamPlayer" parent="MusicPlayer"]
+stream = ExtResource( 2 )
+volume_db = -15.0
+autoplay = true
+
+[node name="sfx" type="Node" parent="."]
+
+[node name="sfx_1" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 5 )
+
+[node name="sfx_2" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 3 )
+
+[node name="sfx_3" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 4 )
+
+[node name="sfx_4" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 6 )

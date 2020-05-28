@@ -1,0 +1,148 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Titania.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://turok.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://wall.png" type="Texture" id=3]
+[ext_resource path="res://Untitled-4.png" type="Texture" id=4]
+[ext_resource path="res://Script/Interface.gd" type="Script" id=5]
+[ext_resource path="res://Script/ButtonInter/InterButton1.gd" type="Script" id=6]
+[ext_resource path="res://Script/ButtonInter/InterButton2.gd" type="Script" id=7]
+[ext_resource path="res://Script/InterButton3.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 120
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 58
+font_data = ExtResource( 2 )
+
+[node name="Interface" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.716
+anchor_right = 0.888
+anchor_bottom = 0.098
+margin_left = 42.3178
+margin_top = -10.0701
+margin_right = 43.1577
+margin_bottom = -10.3341
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "score: %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.513726 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_top = 0.195
+anchor_right = 1.0
+anchor_bottom = 0.435
+margin_top = 0.23999
+margin_bottom = -0.0800171
+custom_fonts/font = SubResource( 2 )
+text = "Paused"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.382
+anchor_top = 0.456
+anchor_right = 0.616
+anchor_bottom = 0.899
+margin_left = -0.258972
+margin_top = -0.0327148
+margin_right = 0.220947
+margin_bottom = -0.256714
+size_flags_vertical = 0
+custom_constants/separation = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InterButton1" type="TextureButton" parent="ColorRect/VBoxContainer"]
+margin_right = 299.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+expand = true
+script = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/InterButton1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Retry"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InterButton2" type="TextureButton" parent="ColorRect/VBoxContainer"]
+margin_top = 98.0
+margin_right = 299.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 0, 80 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+expand = true
+script = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/InterButton2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InterButton3" type="TextureButton" parent="ColorRect/VBoxContainer"]
+margin_top = 196.0
+margin_right = 299.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 0, 80 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/InterButton3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ColorRect/VBoxContainer/InterButton1" to="ColorRect/VBoxContainer/InterButton1" method="_on_InterButton1_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/InterButton2" to="ColorRect/VBoxContainer/InterButton2" method="_on_InterButton2_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/InterButton3" to="ColorRect/VBoxContainer/InterButton3" method="_on_InterButton3_pressed"]
