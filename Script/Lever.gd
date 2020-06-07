@@ -45,8 +45,10 @@ func _process(delta):
 				legitPosition = not player.is_player_at(foodPosition)
 				if $TileMap.get_cell(x, y) >= 0:
 					legitPosition = false
+			# creat Portal
 			if player.tail.size() == Nfood :
 				$Portal.position = foodPosition
+			# creat food
 			else:
 				food = foodScene.instance()
 				add_child(food)
@@ -56,8 +58,7 @@ func _process(delta):
 func on_player_collided():
 	player.canMove = false
 	gameOver = true
-	DataPlayer.hightScore.push_back(DataPlayer.score)
-	DataPlayer.score = 0
+	DataPlayer.get_score(DataPlayer.score)
 	AudioManage.playAudioDie()
 	get_tree().change_scene("res://Scene/SceneGameOver.tscn")
 

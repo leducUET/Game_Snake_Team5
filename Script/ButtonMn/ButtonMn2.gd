@@ -9,4 +9,5 @@ func _ready() -> void:
 
 
 func _on_ButtonMn2_pressed() -> void:
+	DataPlayer.up_date_HightScore()
 	get_tree().change_scene("res://Scene/HightScore.tscn")

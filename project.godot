@@ -40,7 +40,6 @@ _global_script_class_icons={
 
 config/name="Snake"
 run/main_scene="res://Scene/menu.tscn"
-config/icon="res://icon.png"
 
 [autoload]
 

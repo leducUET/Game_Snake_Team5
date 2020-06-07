@@ -10,4 +10,5 @@ func _ready() -> void:
 
 
 func _on_TextureButton_pressed() -> void:
+	DataPlayer.score = 0
 	get_tree().change_scene("res://Scene/Lever01.tscn")
